@@ -9,6 +9,7 @@ import { join } from 'path';
     GeoIP2Module.forRoot({
       config: {
         file: join(process.cwd(), 'src/data', 'GeoLite2-City.mmdb'),
+        opts: { cache: { max: 1000 } },
       },
     }),
   ],
